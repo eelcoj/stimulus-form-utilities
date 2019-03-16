@@ -1,0 +1,21 @@
+{
+  "name": "stimulus-form-utilities",
+  "version": "1.0.0",
+  "description": "A set of small form utility helpers built with Stimulus.",
+  "main": "index.js",
+  "repository": "git@github.com:eelcoj/stimulus-form-utilities.git",
+  "author": "eelco <eelco@needlesstosay.co>",
+  "license": "MIT",
+  "private": false,
+    "keywords": [
+    "stimulus",
+    "stimulusjs",
+    "controller",
+    "stripe.js",
+    "stripe",
+    "elements"
+  ],
+  "dependencies": {
+    "stimulus": "^1.1.0"
+  }
+}
