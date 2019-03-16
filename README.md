@@ -24,8 +24,11 @@ const application = Application.start();
 const context = require.context("controllers", true, /.js$/);
 application.load(definitionsFromContext(context));
 
-import { CharacterCount } from "stimulus-form-utilities"
+import { CharacterCount, AutoResizeHeight, Clipboard, CommandEnter } from "stimulus-form-utilities"
 application.register('character_count', CharacterCount)
+application.register('auto_resize_height', AutoResizeHeight)
+application.register('clipboard', Clipboard)
+application.register('command_enter', CommandEnter)
 ```
 
 ### CharacterCount
@@ -44,7 +47,7 @@ You can change the maximum allowed characters by changing `data-character-count-
 
 ### Auto-resize height of textarea
 ```javascript
-import { AutoResizeheight } from "stimulus-form-utilities"
+import { AutoResizeHeight } from "stimulus-form-utilities"
 application.register('auto_resize_height', AutoResizeHeight)
 ```
 
@@ -72,12 +75,12 @@ You can change the success message by changing `data-character-count-max-value`.
 ### Cmd-/Ctrl + Enter to submit
 ```javascript
 import { CommandEnter } from "stimulus-form-utilities"
-application.register('command-enter', CommandEnter)
+application.register('command_enter', CommandEnter)
 ```
 
 ```html
 <form data-controller="command-enter" action="https://www.getsjabloon.com">
-  <textarea row="1" data-target="command-enter.input" data-action="keydown->command-enter#submit"></textarea>
+  <textarea data-target="command-enter.input" data-action="keydown->command-enter#submit"></textarea>
   <input type="submit">
 </form>
 ```
