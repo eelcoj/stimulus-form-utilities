@@ -1,5 +1,10 @@
 # Stimulus form utilities
-A set of small form utility helpers.
+A set of small form utility helpers:
+
+- characters count
+- auto-resize heighy of a textarea
+- copy to clipboard
+- cmd-/ctrl + enter to submit form
 
 ## Install
 
