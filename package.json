@@ -11,9 +11,11 @@
     "stimulus",
     "stimulusjs",
     "controller",
-    "stripe.js",
-    "stripe",
-    "elements"
+    "elements",
+    "form",
+    "utility",
+    "utilites",
+    "helpers"
   ],
   "dependencies": {
     "stimulus": "^1.1.0"
