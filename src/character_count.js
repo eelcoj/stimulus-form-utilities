@@ -1,11 +1,11 @@
-import { Controller } from "stimulus"
+import { Controller } from 'stimulus'
 
 export default class extends Controller {
-  static targets = [ "input", "countValue" ]
+  static targets = [ 'input', 'countValue' ]
 
   initialize() {
-    this.maxValue     = this.data.get("max-value")     || "140"
-    this.warningClass = this.data.get("warning-class") || "text-red"
+    this.maxValue     = this.data.get('max-value')     || '140'
+    this.warningClass = this.data.get('warning-class') || 'text-red-500'
     this.update()
   }
 
