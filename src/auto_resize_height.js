@@ -14,6 +14,6 @@ export default class extends Controller {
   }
 
   setInputAttributes() {
-    this.inputTarget.setAttribute("style", `height: ${this.inputTarget}px; overflow-y: hidden;`)
+    this.inputTarget.setAttribute("style", `height: ${this.inputTarget.scrollHeight}px; overflow-y: hidden;`)
   }
 }
