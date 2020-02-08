@@ -1,8 +1,8 @@
 # Stimulus form utilities
 A set of small form utility helpers:
 
-- characters count
-- auto-resize heighy of a textarea
+- characters count for any input field
+- auto-resize height of a textarea
 - copy to clipboard
 - cmd-/ctrl + enter to submit form
 
@@ -48,7 +48,7 @@ application.register('character_count', CharacterCount)
   <span data-target="character-count.countValue"></span>
 </form>
 ```
-You can change the maximum allowed characters by changing `data-character-count-max-value`. Furthermore `data-character-count-warning-class` is the value for the Css class added to count value element.
+You can change the maximum allowed characters by changing `data-character-count-max-value`. Furthermore `data-character-count-warning-class` is the value for the Css class added to count value element if the maximum count is exceeded.
 
 ### Auto-resize height of textarea
 ```javascript
@@ -71,11 +71,11 @@ application.register('clipboard', Clipboard)
 ```html
 <form data-controller="clipboard" data-clipboard-success-message="copied">
   <textarea row="1" data-target="clipboard.source"></textarea>
-  <span data-target="clipboard.button" data-action="click->clipboard#copy">copy</span>
+  <button data-target="clipboard.button" data-action="click->clipboard#copy">copy</button>
 </form>
 ```
 
-You can change the success message by changing `data-character-count-max-value`.
+You can change the success message by changing the value of `data-clipboard-success-message`.
 
 ### Cmd-/Ctrl + Enter to submit
 ```javascript
