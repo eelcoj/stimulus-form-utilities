@@ -1,6 +1,6 @@
 {
   "name": "stimulus-form-utilities",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "A set of small form utility helpers built with Stimulus.",
   "main": "dist/stimulus-form-utilities.min.js",
   "repository": {
