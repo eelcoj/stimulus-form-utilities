@@ -69,7 +69,7 @@ application.register('clipboard', Clipboard)
 ```
 
 ```html
-<form data-controller="clipboard" data-clipboard-success-message="copied">
+<form data-controller="clipboard" data-clipboard-success-message="copied" data-clipboard-error-message="error">
   <textarea row="1" data-target="clipboard.source"></textarea>
   <button data-target="clipboard.button" data-action="click->clipboard#copy">copy</button>
 </form>

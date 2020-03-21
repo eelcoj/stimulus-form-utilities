@@ -5,15 +5,20 @@ export default class extends Controller {
 
   connect() {
     this.successMessage = this.data.get("successMessage") || "Copied"
+    this.errorMessage   = this.data.get("errorMessage")   || "Error copying"
   }
 
   copy() {
-    this.sourceTarget.select()
-    document.execCommand("copy")
-    this.setMessage()
+    navigator.clipboard.writeText(this.sourceTarget.value)
+    .then(() => {
+      this.setMessage(this.successMessage)
+    })
+    .catch(err => {
+      this.setMessage(this.errorMessage)
+    })
   }
 
-  setMessage() {
-    this.buttonTarget.textContent = this.successMessage
+  setMessage(label) {
+    this.buttonTarget.textContent = label
   }
 }
